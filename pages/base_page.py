@@ -1,5 +1,5 @@
-class BasePage():
-    def __int__(self, driver, url):
+class BasePage:
+    def __init__(self, driver, url):
         self.driver = driver
         self.url = url
 

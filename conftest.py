@@ -1,7 +1,7 @@
-from datetime import time
-
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
 
 def pytest_addoption(parser):
     parser.addoption('--language', action='store', default='en',
@@ -10,15 +10,12 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="function")
 def driver(request):
-
-    url_site = "https://selenium1py.pythonanywhere.com/"
     choose_language = request.config.getoption("language")
-
-    driver = webdriver.Chrome()
-    driver.get(url_site+choose_language)
+    options = Options()
+    options.add_experimental_option('prefs', {'intl.accept_languages': choose_language})
+    driver = webdriver.Chrome(options=options)
     driver.implicitly_wait(2)
 
     yield driver
     driver.close()
     driver.quit()
-
