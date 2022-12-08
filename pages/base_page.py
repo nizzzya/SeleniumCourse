@@ -1,4 +1,5 @@
 from selenium.common import NoSuchElementException
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class BasePage:
