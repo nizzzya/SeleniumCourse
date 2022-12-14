@@ -1,6 +1,5 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
-from selenium.webdriver.common.alert import Alert
 
 
 class ProductPage(BasePage):
