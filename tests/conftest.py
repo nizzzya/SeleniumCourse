@@ -1,5 +1,3 @@
-import time
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -17,6 +15,5 @@ def driver(request):
     options.add_experimental_option('prefs', {'intl.accept_languages': choose_language})
     driver = webdriver.Chrome(options=options)
     yield driver
-    # time.sleep(9)
     driver.close()
     driver.quit()

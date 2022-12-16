@@ -8,6 +8,7 @@ from .locators import BasePageLocators
 
 
 class BasePage:
+    # Some test usd another timeout, but sometimes I need use implicitly_wait
     def __init__(self, driver, url, timeout=10):
         self.driver = driver
         self.url = url

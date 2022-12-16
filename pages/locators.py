@@ -7,6 +7,7 @@ class BasePageLocators():
     BASKET_LINK = (By.XPATH, "//span/a[contains(@href, 'basket')]")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
+
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
@@ -27,6 +28,7 @@ class ProductPageLocators():
     SUCCESS_BLOCK_NAME_BOOK = (By.XPATH, "//*[@id=\"messages\"]//strong[1]")
     SUCCESS_BLOCK_PRICE = (By.XPATH, "//*[@id=\"messages\"]//p/strong")
     SUCCESS_MESSAGE = (By.XPATH, "//*[@id=\"messages\"]//*[@class=\"alertinner\"]")
+
 
 class BasketPageLocators():
     FORM_WITH_PRODUCT = (By.ID, "basket_formset")
